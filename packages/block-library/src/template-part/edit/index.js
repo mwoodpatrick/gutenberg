@@ -96,7 +96,7 @@ export default function TemplatePartEdit( {
 		);
 	}
 
-	if ( hasAlreadyRendered ) {
+	if ( isEntityAvailable && hasAlreadyRendered ) {
 		return (
 			<TagName { ...blockProps }>
 				<Warning>
