@@ -14,10 +14,6 @@
 	}
 }
 
-.wp-block-navigation__inserter-content {
-	padding: $grid-unit-20;
-}
-
 // Ensure that an empty block has space around the appender.
 .wp-block-navigation__container {
 	min-height: $grid-unit-05 + $grid-unit-05 + $button-size;
