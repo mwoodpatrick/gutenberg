@@ -14,11 +14,6 @@
 	}
 }
 
-// Ensure that an empty block has space around the appender.
-.wp-block-navigation__container {
-	min-height: $grid-unit-05 + $grid-unit-05 + $button-size;
-}
-
 // Ensure sub-menus stay open and visible when a nested block is selected.
 .wp-block-navigation__container.is-parent-of-selected-block {
 	visibility: visible;
@@ -211,6 +206,12 @@ $color-control-label-height: 20px;
 /**
  * Setup state
  */
+
+// Ensure that an empty block has space around the appender.
+// @todo: revisit this to allow thinner menus.
+.wp-block-navigation__container {
+	min-height: $grid-unit-05 + $grid-unit-05 + $button-size;
+}
 
 // Unselected state.
 .wp-block-navigation-placeholder__preview {
