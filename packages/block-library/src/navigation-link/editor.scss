@@ -1,9 +1,9 @@
 // Normalize Link and edit containers, to look mostly the same.
-.wp-block-navigation-link__field .components-text-control__input.components-text-control__input,
+.wp-block-navigation-link__field .components-text-control__input.components-text-control__input, // @todo: this selector doesn't appear to target anything.
 .wp-block-navigation-link__container {
 	border-radius: 0;
+
 	// Make it the same height as the appender to prevent a jump. Maybe revisit this.
-	line-height: $button-size;
 	min-height: $button-size;
 }
 
