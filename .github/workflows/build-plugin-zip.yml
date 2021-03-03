@@ -25,7 +25,7 @@ jobs:
       release_branch: ${{ steps.get_version.outputs.release_branch }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
 
       - name: Configure git user name and email
         run: |
@@ -76,13 +76,13 @@ jobs:
             git commit -m "Bump plugin version to ${{ steps.get_version.outputs.new_version }}"
             git push --set-upstream origin "${{ steps.get_version.outputs.release_branch }}"
 
-      - name: Cherry-pick to master
-        if: github.ref != 'master'
+      - name: Cherry-pick to trunk
+        if: github.ref != 'trunk'
         run: |
-          git fetch --depth=1 origin master
-          git checkout master
-          MASTER_VERSION=$(jq --raw-output '.version' package.json)
-          if [[ ${{ steps.get_version.outputs.old_version }} == "$MASTER_VERSION" ]]; then
+          git fetch --depth=1 origin trunk
+          git checkout trunk
+          TRUNK_VERSION=$(jq --raw-output '.version' package.json)
+          if [[ ${{ steps.get_version.outputs.old_version }} == "$TRUNK_VERSION" ]]; then
             git cherry-pick "${{ steps.get_version.outputs.release_branch }}"
             git push
           fi
