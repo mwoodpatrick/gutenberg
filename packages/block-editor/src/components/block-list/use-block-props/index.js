@@ -83,7 +83,7 @@ export function useBlockProps( props = {}, { __unstableIsHtml } = {} ) {
 			return {
 				mode: getBlockMode( clientId ),
 				name: blockName,
-				blockTitle: getBlockType( blockName ).title,
+				blockTitle: getBlockType( blockName )?.title,
 				isPartOfSelection: isSelected || isPartOfMultiSelection,
 				adjustScrolling:
 					isSelected || isFirstMultiSelectedBlock( clientId ),

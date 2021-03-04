@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation can add page link 1`] = `
+"<!-- wp:navigation {\\"orientation\\":\\"horizontal\\"} -->
+<!-- wp:navigation-link {\\"label\\":\\"example.com\\",\\"id\\":\\"example.com\\",\\"url\\":\\"http://example.com\\"} /-->
+<!-- /wp:navigation -->"
+`;
+
+exports[`Navigation can be created by typing "/navigation" 1`] = `"<!-- wp:navigation {\\"orientation\\":\\"horizontal\\"} /-->"`;
